@@ -12,4 +12,17 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Force Nitro on outside the Lovable sandbox and target Vercel's Build Output API
+  // (default preset is cloudflare-module, which produces the wrong output for Vercel).
+  // The wrapper always forces output.dir/serverDir/publicDir under "dist" unless
+  // overridden here, so the "vercel" preset's own .vercel/output convention has to be
+  // set explicitly too — otherwise Vercel's Build Output API never finds config.json.
+  nitro: {
+    preset: "vercel",
+    output: {
+      dir: ".vercel/output",
+      serverDir: ".vercel/output/functions/__server.func",
+      publicDir: ".vercel/output/static",
+    },
+  },
 });
