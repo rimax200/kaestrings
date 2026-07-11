@@ -5,10 +5,10 @@ import { useCallback, useEffect, useRef, useState, type ReactNode } from "react"
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Portal — Step Through. Work Smarter." },
-      { name: "description", content: "Stream the cinematic, anywhere. Step through to stories worth your time." },
-      { property: "og:title", content: "Portal — Step Through. Work Smarter." },
-      { property: "og:description", content: "Stream the cinematic, anywhere." },
+      { title: "Kaestrings | Official Site" },
+      { name: "description", content: "Worship anthems born in prayer, carried across nations by mercy." },
+      { property: "og:title", content: "Kaestrings | Official Site" },
+      { property: "og:description", content: "Worship anthems born in prayer, carried across nations by mercy." },
     ],
     links: [
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
